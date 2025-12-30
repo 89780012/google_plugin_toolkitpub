@@ -24,3 +24,11 @@ This file tracks the project's current status, including recent changes, current
 *   需要确定多语言支持的具体语言列表
 *   需要确认是否需要离线缓存工具数据
 *   需要确定是否需要添加工具收藏功能
+
+## Recent Changes
+
+*   2025-12-30 02:39:00 - 更新 tools-data.json 以匹配 toolkitpub.com 网站的 41 个工具
+      - 添加了 Docker 工具分类
+      - 添加了 Time 工具分类
+      - 更新了所有工具的描述和分类
+      - 移除了不存在的工具（如 port-scanner, regex-tester, sql-formatter 等）
