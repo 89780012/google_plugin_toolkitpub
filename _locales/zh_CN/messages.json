@@ -18,5 +18,89 @@
   "no_results": {
     "message": "未找到工具",
     "description": "No results message"
+  },
+  "about": {
+    "message": "关于",
+    "description": "About link text"
+  },
+  "back": {
+    "message": "返回",
+    "description": "Back button text"
+  },
+  "about_title": {
+    "message": "关于 ToolkitPub",
+    "description": "About page title"
+  },
+  "about_subtitle": {
+    "message": "开发者工具箱",
+    "description": "About page subtitle"
+  },
+  "about_description_title": {
+    "message": "网站介绍",
+    "description": "Website introduction title"
+  },
+  "about_description_text": {
+    "message": "ToolkitPub 是一个免费的在线开发者工具箱，提供 41 种实用工具，帮助开发者提高工作效率。网站支持中英文界面，无需注册即可使用。",
+    "description": "Website description text"
+  },
+  "about_tools_count": {
+    "message": "个在线工具",
+    "description": "Tools count label"
+  },
+  "about_categories_count": {
+    "message": "个分类",
+    "description": "Categories count label"
+  },
+  "about_categories_title": {
+    "message": "工具分类",
+    "description": "Categories section title"
+  },
+  "about_visit_title": {
+    "message": "访问官网",
+    "description": "Visit website section title"
+  },
+  "about_visit_btn": {
+    "message": "打开 ToolkitPub",
+    "description": "Visit website button text"
+  },
+  "cat_developer": {
+    "message": "开发者工具",
+    "description": "Developer tools category"
+  },
+  "cat_converter": {
+    "message": "转换器",
+    "description": "Converters category"
+  },
+  "cat_json": {
+    "message": "JSON 工具",
+    "description": "JSON utilities category"
+  },
+  "cat_image": {
+    "message": "图像工具",
+    "description": "Image tools category"
+  },
+  "cat_generator": {
+    "message": "生成器",
+    "description": "Generator tools category"
+  },
+  "cat_docker": {
+    "message": "Docker 工具",
+    "description": "Docker tools category"
+  },
+  "cat_text": {
+    "message": "文本工具",
+    "description": "Text tools category"
+  },
+  "cat_crypto": {
+    "message": "加密工具",
+    "description": "Crypto tools category"
+  },
+  "cat_network": {
+    "message": "网络工具",
+    "description": "Network tools category"
+  },
+  "cat_time": {
+    "message": "时间工具",
+    "description": "Time tools category"
   }
 }

@@ -14,6 +14,7 @@ const categoryTabs = document.getElementById('categoryTabs');
 const toolsList = document.getElementById('toolsList');
 const toolsCount = document.getElementById('toolsCount');
 const langSwitcher = document.getElementById('langSwitcher');
+const langSwitcherAbout = document.getElementById('langSwitcherAbout');
 
 // 当前筛选条件
 let currentCategory = 'all';
@@ -41,6 +42,9 @@ async function init() {
     
     // 更新语言切换按钮状态
     updateLangButtons();
+    
+    // 初始化所有 i18n 文本
+    updateI18nTexts();
   } catch (error) {
     console.error('Failed to load tools data:', error);
   }
@@ -221,14 +225,33 @@ function getCategoryIcon(categoryId) {
 
 // 获取 i18n 消息
 function getMessage(key) {
-  if (typeof chrome !== 'undefined' && chrome.i18n) {
-    return chrome.i18n.getMessage(key) || key;
-  }
-  // 本地测试时的默认消息
+  // 使用本地消息以支持动态语言切换
   const messages = {
     'all_categories': currentLang === 'zh' ? '全部分类' : 'All Categories',
     'search_placeholder': currentLang === 'zh' ? '搜索工具...' : 'Search tools...',
-    'no_results': currentLang === 'zh' ? '未找到相关工具' : 'No tools found'
+    'no_results': currentLang === 'zh' ? '未找到相关工具' : 'No tools found',
+    'about': currentLang === 'zh' ? '关于' : 'About',
+    'back': currentLang === 'zh' ? '返回' : 'Back',
+    'about_subtitle': currentLang === 'zh' ? '开发者工具箱' : 'Developer Toolkit',
+    'about_description_title': currentLang === 'zh' ? '网站介绍' : 'Website Introduction',
+    'about_description_text': currentLang === 'zh'
+      ? 'ToolkitPub 是一个免费的在线开发者工具箱，提供 41 种实用工具，帮助开发者提高工作效率。网站支持中英文界面，无需注册即可使用。'
+      : 'ToolkitPub is a free online developer toolkit offering 41 practical tools to help developers improve work efficiency. The website supports Chinese and English interfaces and can be used without registration.',
+    'about_tools_count': currentLang === 'zh' ? '个在线工具' : 'Online Tools',
+    'about_categories_count': currentLang === 'zh' ? '个分类' : 'Categories',
+    'about_categories_title': currentLang === 'zh' ? '工具分类' : 'Tool Categories',
+    'about_visit_title': currentLang === 'zh' ? '访问官网' : 'Visit Website',
+    'about_visit_btn': currentLang === 'zh' ? '打开 ToolkitPub' : 'Open ToolkitPub',
+    'cat_developer': currentLang === 'zh' ? '开发者工具' : 'Developer Tools',
+    'cat_converter': currentLang === 'zh' ? '转换器' : 'Converters',
+    'cat_json': currentLang === 'zh' ? 'JSON 工具' : 'JSON Utilities',
+    'cat_image': currentLang === 'zh' ? '图像工具' : 'Image Tools',
+    'cat_generator': currentLang === 'zh' ? '生成器' : 'Generator Tools',
+    'cat_docker': currentLang === 'zh' ? 'Docker 工具' : 'Docker Tools',
+    'cat_text': currentLang === 'zh' ? '文本工具' : 'Text Tools',
+    'cat_crypto': currentLang === 'zh' ? '加密工具' : 'Crypto Tools',
+    'cat_network': currentLang === 'zh' ? '网络工具' : 'Network Tools',
+    'cat_time': currentLang === 'zh' ? '时间工具' : 'Time Tools'
   };
   return messages[key] || key;
 }
@@ -253,28 +276,67 @@ function bindEvents() {
     }
   });
 
-  // 语言切换
+  // 语言切换 - 主视图
   langSwitcher.addEventListener('click', (e) => {
     if (e.target.classList.contains('lang-btn')) {
-      const newLang = e.target.dataset.lang;
-      if (newLang !== currentLang) {
-        currentLang = newLang;
-        localStorage.setItem('toolkitpub_lang', newLang);
-        
-        // 重置当前分类为"全部"
-        currentCategory = 'all';
-        
-        // 更新按钮状态
-        updateLangButtons();
-        
-        // 重新渲染页面
-        renderCategoryTabs();
-        renderTools();
-        updateToolsCount();
-        updateSubtitle();
-      }
+      handleLangSwitch(e.target.dataset.lang);
     }
   });
+
+  // 语言切换 - 关于视图
+  if (langSwitcherAbout) {
+    langSwitcherAbout.addEventListener('click', (e) => {
+      if (e.target.classList.contains('lang-btn')) {
+        handleLangSwitch(e.target.dataset.lang);
+      }
+    });
+  }
+
+  // 关于按钮点击
+  const aboutLink = document.getElementById('aboutLink');
+  if (aboutLink) {
+    aboutLink.addEventListener('click', () => {
+      showAboutView();
+    });
+  }
+
+  // 返回按钮点击
+  const backBtn = document.getElementById('backBtn');
+  if (backBtn) {
+    backBtn.addEventListener('click', () => {
+      showMainView();
+    });
+  }
+
+  // 回到顶部按钮
+  const backToTop = document.getElementById('backToTop');
+  const mainContent = document.querySelector('#mainView .main-content');
+  if (backToTop && mainContent) {
+    backToTop.addEventListener('click', () => {
+      mainContent.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+}
+
+// 处理语言切换
+function handleLangSwitch(newLang) {
+  if (newLang !== currentLang) {
+    currentLang = newLang;
+    localStorage.setItem('toolkitpub_lang', newLang);
+    
+    // 重置当前分类为"全部"
+    currentCategory = 'all';
+    
+    // 更新按钮状态
+    updateLangButtons();
+    
+    // 重新渲染页面
+    renderCategoryTabs();
+    renderTools();
+    updateToolsCount();
+    updateSubtitle();
+    updateI18nTexts();
+  }
 }
 
 // 更新语言切换按钮状态
@@ -310,6 +372,33 @@ function openCenteredWindow(url) {
   
   // 打开新窗口
   window.open(url, '_blank', features);
+}
+
+// 显示关于视图
+function showAboutView() {
+  document.getElementById('mainView').classList.remove('active');
+  document.getElementById('aboutView').classList.add('active');
+  // 确保语言按钮状态同步
+  updateLangButtons();
+  // 更新所有文本
+  updateI18nTexts();
+}
+
+// 显示主视图
+function showMainView() {
+  document.getElementById('aboutView').classList.remove('active');
+  document.getElementById('mainView').classList.add('active');
+}
+
+// 更新所有 i18n 文本
+function updateI18nTexts() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const text = getMessage(key);
+    if (text) {
+      el.textContent = text;
+    }
+  });
 }
 
 // 页面加载完成后初始化

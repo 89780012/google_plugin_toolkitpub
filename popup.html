@@ -10,38 +10,172 @@
 </head>
 <body>
   <div class="container">
-    <!-- 头部标题 -->
-    <div class="header">
-      <div class="lang-switcher" id="langSwitcher">
-        <button class="lang-btn" data-lang="zh">中文</button>
-        <button class="lang-btn" data-lang="en">EN</button>
+    <!-- 主视图 -->
+    <div id="mainView" class="view active">
+      <!-- 固定头部导航栏 -->
+      <div class="header-nav">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" data-lang="zh">中文</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
       </div>
-      <div class="logo">🛠️</div>
-      <h1 class="title">ToolkitPub</h1>
-      <p class="subtitle">开发者工具箱</p>
-    </div>
 
-    <!-- 搜索框 -->
-    <div class="search-box">
-      <span class="search-icon">🔍</span>
-      <input type="text" id="searchInput" placeholder="__MSG_search_placeholder__">
-    </div>
+      <!-- 可滚动内容区域 -->
+      <div class="main-content">
+        <!-- 头部标题 -->
+        <div class="header">
+          <div class="logo">🛠️</div>
+          <h1 class="title">ToolkitPub</h1>
+          <p class="subtitle">开发者工具箱</p>
+        </div>
 
-    <!-- 分类标签 -->
-    <div class="category-tabs" id="categoryTabs">
-      <button class="category-tab active" data-category="all">
-        __MSG_all_categories__
+        <!-- 搜索框 -->
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="__MSG_search_placeholder__">
+        </div>
+
+        <!-- 分类标签 -->
+        <div class="category-tabs" id="categoryTabs">
+          <button class="category-tab active" data-category="all">
+            __MSG_all_categories__
+          </button>
+        </div>
+
+        <!-- 工具列表 -->
+        <div class="tools-container">
+          <div class="tools-list" id="toolsList"></div>
+        </div>
+      </div>
+
+      <!-- 底部信息 -->
+      <div class="footer" id="footer">
+        <span id="toolsCount"></span>
+        <button class="about-link" id="aboutLink">
+          <span class="material-icons">info</span>
+          <span data-i18n="about">关于</span>
+        </button>
+      </div>
+
+      <!-- 回到顶部按钮 -->
+      <button class="back-to-top" id="backToTop">
+        <span class="material-icons">arrow_upward</span>
       </button>
     </div>
 
-    <!-- 工具列表 -->
-    <div class="tools-container">
-      <div class="tools-list" id="toolsList"></div>
-    </div>
+    <!-- 关于视图 -->
+    <div id="aboutView" class="view">
+      <!-- 固定头部导航栏 -->
+      <div class="header-nav about-nav">
+        <button class="back-btn" id="backBtn">
+          <span class="material-icons">arrow_back</span>
+          <span data-i18n="back">返回</span>
+        </button>
+        <div class="lang-switcher" id="langSwitcherAbout">
+          <button class="lang-btn" data-lang="zh">中文</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
 
-    <!-- 底部信息 -->
-    <div class="footer" id="footer">
-      <span id="toolsCount"></span>
+      <!-- 可滚动内容区域 -->
+      <div class="main-content">
+        <!-- 头部 -->
+        <div class="about-header">
+          <div class="about-logo">🛠️</div>
+          <h1 class="about-title">ToolkitPub</h1>
+          <p class="about-subtitle" data-i18n="about_subtitle">开发者工具箱</p>
+        </div>
+
+        <!-- 关于内容 -->
+        <div class="about-content">
+        <div class="about-section">
+          <h2 class="section-title">
+            <span class="material-icons">info</span>
+            <span data-i18n="about_description_title">网站介绍</span>
+          </h2>
+          <p class="section-text" data-i18n="about_description_text">ToolkitPub 是一个免费的在线开发者工具箱，提供 41 种实用工具，帮助开发者提高工作效率。网站支持中英文界面，无需注册即可使用。</p>
+        </div>
+
+        <!-- 工具统计 -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">41</div>
+            <div class="stat-label" data-i18n="about_tools_count">个在线工具</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10</div>
+            <div class="stat-label" data-i18n="about_categories_count">个分类</div>
+          </div>
+        </div>
+
+        <!-- 分类列表 -->
+        <div class="about-section">
+          <h2 class="section-title">
+            <span class="material-icons">category</span>
+            <span data-i18n="about_categories_title">工具分类</span>
+          </h2>
+          <div class="categories-list">
+            <div class="category-item">
+              <span class="material-icons">code</span>
+              <span data-i18n="cat_developer">开发者工具</span>
+            </div>
+            <div class="category-item">
+              <span class="material-icons">swap_horiz</span>
+              <span data-i18n="cat_converter">转换器</span>
+            </div>
+            <div class="category-item">
+              <span class="material-icons">data_object</span>
+              <span data-i18n="cat_json">JSON 工具</span>
+            </div>
+            <div class="category-item">
+              <span class="material-icons">image</span>
+              <span data-i18n="cat_image">图像工具</span>
+            </div>
+            <div class="category-item">
+              <span class="material-icons">auto_fix_high</span>
+              <span data-i18n="cat_generator">生成器</span>
+            </div>
+            <div class="category-item">
+              <span class="material-icons">inventory_2</span>
+              <span data-i18n="cat_docker">Docker 工具</span>
+            </div>
+            <div class="category-item">
+              <span class="material-icons">text_fields</span>
+              <span data-i18n="cat_text">文本工具</span>
+            </div>
+            <div class="category-item">
+              <span class="material-icons">lock</span>
+              <span data-i18n="cat_crypto">加密工具</span>
+            </div>
+            <div class="category-item">
+              <span class="material-icons">wifi</span>
+              <span data-i18n="cat_network">网络工具</span>
+            </div>
+            <div class="category-item">
+              <span class="material-icons">schedule</span>
+              <span data-i18n="cat_time">时间工具</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 访问网站 -->
+        <div class="about-section">
+          <h2 class="section-title">
+            <span class="material-icons">language</span>
+            <span data-i18n="about_visit_title">访问官网</span>
+          </h2>
+          <a href="https://www.toolkitpub.com/" target="_blank" class="visit-btn">
+            <span class="material-icons">open_in_new</span>
+            <span data-i18n="about_visit_btn">打开 ToolkitPub</span>
+          </a>
+        </div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="about-footer">
+          <p>© 2025 ToolkitPub</p>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -28,7 +28,14 @@ This file tracks the project's current status, including recent changes, current
 ## Recent Changes
 
 *   2025-12-30 02:39:00 - 更新 tools-data.json 以匹配 toolkitpub.com 网站的 41 个工具
-      - 添加了 Docker 工具分类
-      - 添加了 Time 工具分类
-      - 更新了所有工具的描述和分类
-      - 移除了不存在的工具（如 port-scanner, regex-tester, sql-formatter 等）
+       - 添加了 Docker 工具分类
+       - 添加了 Time 工具分类
+       - 更新了所有工具的描述和分类
+       - 移除了不存在的工具（如 port-scanner, regex-tester, sql-formatter 等）
+
+*   2025-12-30 02:50:00 - 添加了关于页面 (about.html) 介绍 toolkitpub.com 网站
+       - 创建 about.html 页面，包含网站介绍、工具统计、分类列表
+       - 创建 about.js 处理页面语言切换
+       - 更新 popup.html 在底部添加关于链接
+       - 更新 styles.css 添加关于页面样式
+       - 更新国际化文件 messages.json 添加中英文翻译
