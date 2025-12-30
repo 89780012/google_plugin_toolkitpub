@@ -1,0 +1,590 @@
+{
+  "categories": [
+    {
+      "id": "developer",
+      "name": {
+        "zh": "开发者工具",
+        "en": "Developer Tools"
+      },
+      "icon": "code"
+    },
+    {
+      "id": "converter",
+      "name": {
+        "zh": "转换器",
+        "en": "Converters"
+      },
+      "icon": "swap_horiz"
+    },
+    {
+      "id": "json",
+      "name": {
+        "zh": "JSON 工具",
+        "en": "JSON Tools"
+      },
+      "icon": "data_object"
+    },
+    {
+      "id": "image",
+      "name": {
+        "zh": "图像工具",
+        "en": "Image Tools"
+      },
+      "icon": "image"
+    },
+    {
+      "id": "generator",
+      "name": {
+        "zh": "生成器",
+        "en": "Generators"
+      },
+      "icon": "auto_fix_high"
+    },
+    {
+      "id": "text",
+      "name": {
+        "zh": "文本工具",
+        "en": "Text Tools"
+      },
+      "icon": "text_fields"
+    },
+    {
+      "id": "crypto",
+      "name": {
+        "zh": "加密工具",
+        "en": "Crypto Tools"
+      },
+      "icon": "lock"
+    },
+    {
+      "id": "network",
+      "name": {
+        "zh": "网络工具",
+        "en": "Network Tools"
+      },
+      "icon": "wifi"
+    }
+  ],
+  "tools": [
+    {
+      "id": "json-formatter",
+      "name": {
+        "zh": "JSON 格式化",
+        "en": "JSON Formatter"
+      },
+      "description": {
+        "zh": "在线 JSON 格式化工具",
+        "en": "Online JSON Formatter"
+      },
+      "category": "json",
+      "icon": "https://www.toolkitpub.com/images/tools/json-formatter.svg"
+    },
+    {
+      "id": "json-to-xml",
+      "name": {
+        "zh": "JSON 转 XML",
+        "en": "JSON to XML"
+      },
+      "description": {
+        "zh": "将 JSON 转换为 XML 格式",
+        "en": "Convert JSON to XML format"
+      },
+      "category": "json",
+      "icon": "https://www.toolkitpub.com/images/tools/json-to-xml.svg"
+    },
+    {
+      "id": "json-to-csv",
+      "name": {
+        "zh": "JSON 转 CSV",
+        "en": "JSON to CSV"
+      },
+      "description": {
+        "zh": "将 JSON 转换为 CSV 格式",
+        "en": "Convert JSON to CSV format"
+      },
+      "category": "json",
+      "icon": "https://www.toolkitpub.com/images/tools/json-to-csv.svg"
+    },
+    {
+      "id": "json-to-yaml",
+      "name": {
+        "zh": "JSON 转 YAML",
+        "en": "JSON to YAML"
+      },
+      "description": {
+        "zh": "将 JSON 转换为 YAML 格式",
+        "en": "Convert JSON to YAML format"
+      },
+      "category": "json",
+      "icon": "https://www.toolkitpub.com/images/tools/json-to-yaml.svg"
+    },
+    {
+      "id": "base64-encoder",
+      "name": {
+        "zh": "Base64 编码",
+        "en": "Base64 Encoder"
+      },
+      "description": {
+        "zh": "在线 Base64 编码工具",
+        "en": "Online Base64 Encoder"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/base64-encoder.svg"
+    },
+    {
+      "id": "base64-decoder",
+      "name": {
+        "zh": "Base64 解码",
+        "en": "Base64 Decoder"
+      },
+      "description": {
+        "zh": "在线 Base64 解码工具",
+        "en": "Online Base64 Decoder"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/base64-decoder.svg"
+    },
+    {
+      "id": "url-encoder",
+      "name": {
+        "zh": "URL 编码",
+        "en": "URL Encoder"
+      },
+      "description": {
+        "zh": "在线 URL 编码工具",
+        "en": "Online URL Encoder"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/url-encoder.svg"
+    },
+    {
+      "id": "url-decoder",
+      "name": {
+        "zh": "URL 解码",
+        "en": "URL Decoder"
+      },
+      "description": {
+        "zh": "在线 URL 解码工具",
+        "en": "Online URL Decoder"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/url-decoder.svg"
+    },
+    {
+      "id": "timestamp-converter",
+      "name": {
+        "zh": "时间戳转换",
+        "en": "Timestamp Converter"
+      },
+      "description": {
+        "zh": "时间戳与日期格式互转",
+        "en": "Convert timestamp to date and vice versa"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/timestamp-converter.svg"
+    },
+    {
+      "id": "color-converter",
+      "name": {
+        "zh": "颜色转换",
+        "en": "Color Converter"
+      },
+      "description": {
+        "zh": "颜色格式转换工具",
+        "en": "Color format converter"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/color-converter.svg"
+    },
+    {
+      "id": "uuid-generator",
+      "name": {
+        "zh": "UUID 生成器",
+        "en": "UUID Generator"
+      },
+      "description": {
+        "zh": "生成 UUID/ GUID",
+        "en": "Generate UUID/GUID"
+      },
+      "category": "generator",
+      "icon": "https://www.toolkitpub.com/images/tools/uuid-generator.svg"
+    },
+    {
+      "id": "password-generator",
+      "name": {
+        "zh": "密码生成器",
+        "en": "Password Generator"
+      },
+      "description": {
+        "zh": "生成安全密码",
+        "en": "Generate secure passwords"
+      },
+      "category": "generator",
+      "icon": "https://www.toolkitpub.com/images/tools/password-generator.svg"
+    },
+    {
+      "id": "qrcode-generator",
+      "name": {
+        "zh": "二维码生成器",
+        "en": "QR Code Generator"
+      },
+      "description": {
+        "zh": "生成二维码图片",
+        "en": "Generate QR code images"
+      },
+      "category": "generator",
+      "icon": "https://www.toolkitpub.com/images/tools/qrcode-generator.svg"
+    },
+    {
+      "id": "hash-generator",
+      "name": {
+        "zh": "哈希生成器",
+        "en": "Hash Generator"
+      },
+      "description": {
+        "zh": "生成 MD5, SHA-1, SHA-256 等哈希值",
+        "en": "Generate MD5, SHA-1, SHA-256 hashes"
+      },
+      "category": "crypto",
+      "icon": "https://www.toolkitpub.com/images/tools/hash-generator.svg"
+    },
+    {
+      "id": "hmac-generator",
+      "name": {
+        "zh": "HMAC 生成器",
+        "en": "HMAC Generator"
+      },
+      "description": {
+        "zh": "生成 HMAC 哈希",
+        "en": "Generate HMAC hashes"
+      },
+      "category": "crypto",
+      "icon": "https://www.toolkitpub.com/images/tools/hmac-generator.svg"
+    },
+    {
+      "id": "ip-lookup",
+      "name": {
+        "zh": "IP 查询",
+        "en": "IP Lookup"
+      },
+      "description": {
+        "zh": "查询 IP 地址信息",
+        "en": "Look up IP address information"
+      },
+      "category": "network",
+      "icon": "https://www.toolkitpub.com/images/tools/ip-lookup.svg"
+    },
+    {
+      "id": "port-scanner",
+      "name": {
+        "zh": "端口扫描",
+        "en": "Port Scanner"
+      },
+      "description": {
+        "zh": "扫描端口状态",
+        "en": "Scan port status"
+      },
+      "category": "network",
+      "icon": "https://www.toolkitpub.com/images/tools/port-scanner.svg"
+    },
+    {
+      "id": "cron-parser",
+      "name": {
+        "zh": "Cron 解析器",
+        "en": "Cron Parser"
+      },
+      "description": {
+        "zh": "解析 Cron 表达式",
+        "en": "Parse Cron expressions"
+      },
+      "category": "developer",
+      "icon": "https://www.toolkitpub.com/images/tools/cron-parser.svg"
+    },
+    {
+      "id": "regex-tester",
+      "name": {
+        "zh": "正则测试器",
+        "en": "Regex Tester"
+      },
+      "description": {
+        "zh": "测试正则表达式",
+        "en": "Test regular expressions"
+      },
+      "category": "developer",
+      "icon": "https://www.toolkitpub.com/images/tools/regex-tester.svg"
+    },
+    {
+      "id": "sql-formatter",
+      "name": {
+        "zh": "SQL 格式化",
+        "en": "SQL Formatter"
+      },
+      "description": {
+        "zh": "格式化 SQL 语句",
+        "en": "Format SQL statements"
+      },
+      "category": "developer",
+      "icon": "https://www.toolkitpub.com/images/tools/sql-formatter.svg"
+    },
+    {
+      "id": "jwt-decoder",
+      "name": {
+        "zh": "JWT 解码",
+        "en": "JWT Decoder"
+      },
+      "description": {
+        "zh": "解码 JWT Token",
+        "en": "Decode JWT tokens"
+      },
+      "category": "developer",
+      "icon": "https://www.toolkitpub.com/images/tools/jwt-decoder.svg"
+    },
+    {
+      "id": "base64-image",
+      "name": {
+        "zh": "图片转 Base64",
+        "en": "Image to Base64"
+      },
+      "description": {
+        "zh": "将图片转换为 Base64",
+        "en": "Convert images to Base64"
+      },
+      "category": "image",
+      "icon": "https://www.toolkitpub.com/images/tools/base64-image.svg"
+    },
+    {
+      "id": "image-compressor",
+      "name": {
+        "zh": "图片压缩",
+        "en": "Image Compressor"
+      },
+      "description": {
+        "zh": "压缩图片文件大小",
+        "en": "Compress image file size"
+      },
+      "category": "image",
+      "icon": "https://www.toolkitpub.com/images/tools/image-compressor.svg"
+    },
+    {
+      "id": "image-resizer",
+      "name": {
+        "zh": "图片调整大小",
+        "en": "Image Resizer"
+      },
+      "description": {
+        "zh": "调整图片尺寸",
+        "en": "Resize images"
+      },
+      "category": "image",
+      "icon": "https://www.toolkitpub.com/images/tools/image-resizer.svg"
+    },
+    {
+      "id": "text-counter",
+      "name": {
+        "zh": "文本计数器",
+        "en": "Text Counter"
+      },
+      "description": {
+        "zh": "统计字符数和词数",
+        "en": "Count characters and words"
+      },
+      "category": "text",
+      "icon": "https://www.toolkitpub.com/images/tools/text-counter.svg"
+    },
+    {
+      "id": "text-case-converter",
+      "name": {
+        "zh": "文本大小写转换",
+        "en": "Text Case Converter"
+      },
+      "description": {
+        "zh": "转换文本大小写",
+        "en": "Convert text case"
+      },
+      "category": "text",
+      "icon": "https://www.toolkitpub.com/images/tools/text-case-converter.svg"
+    },
+    {
+      "id": "lorem-ipsum",
+      "name": {
+        "zh": "Lorem Ipsum 生成器",
+        "en": "Lorem Ipsum Generator"
+      },
+      "description": {
+        "zh": "生成随机文本",
+        "en": "Generate random text"
+      },
+      "category": "generator",
+      "icon": "https://www.toolkitpub.com/images/tools/lorem-ipsum.svg"
+    },
+    {
+      "id": "markdown-preview",
+      "name": {
+        "zh": "Markdown 预览",
+        "en": "Markdown Preview"
+      },
+      "description": {
+        "zh": "预览 Markdown 内容",
+        "en": "Preview Markdown content"
+      },
+      "category": "developer",
+      "icon": "https://www.toolkitpub.com/images/tools/markdown-preview.svg"
+    },
+    {
+      "id": "yaml-to-json",
+      "name": {
+        "zh": "YAML 转 JSON",
+        "en": "YAML to JSON"
+      },
+      "description": {
+        "zh": "将 YAML 转换为 JSON 格式",
+        "en": "Convert YAML to JSON format"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/yaml-to-json.svg"
+    },
+    {
+      "id": "xml-to-json",
+      "name": {
+        "zh": "XML 转 JSON",
+        "en": "XML to JSON"
+      },
+      "description": {
+        "zh": "将 XML 转换为 JSON 格式",
+        "en": "Convert XML to JSON format"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/xml-to-json.svg"
+    },
+    {
+      "id": "csv-to-json",
+      "name": {
+        "zh": "CSV 转 JSON",
+        "en": "CSV to JSON"
+      },
+      "description": {
+        "zh": "将 CSV 转换为 JSON 格式",
+        "en": "Convert CSV to JSON format"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/csv-to-json.svg"
+    },
+    {
+      "id": "hex-converter",
+      "name": {
+        "zh": "十六进制转换",
+        "en": "Hex Converter"
+      },
+      "description": {
+        "zh": "进制转换工具",
+        "en": "Number base converter"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/hex-converter.svg"
+    },
+    {
+      "id": "binary-converter",
+      "name": {
+        "zh": "二进制转换",
+        "en": "Binary Converter"
+      },
+      "description": {
+        "zh": "二进制与其他进制转换",
+        "en": "Binary and other base conversion"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/binary-converter.svg"
+    },
+    {
+      "id": "unicode-converter",
+      "name": {
+        "zh": "Unicode 转换",
+        "en": "Unicode Converter"
+      },
+      "description": {
+        "zh": "Unicode 编码转换",
+        "en": "Unicode encoding converter"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/unicode-converter.svg"
+    },
+    {
+      "id": "html-entity",
+      "name": {
+        "zh": "HTML 实体转换",
+        "en": "HTML Entity Converter"
+      },
+      "description": {
+        "zh": "HTML 实体编码解码",
+        "en": "HTML entity encode/decode"
+      },
+      "category": "converter",
+      "icon": "https://www.toolkitpub.com/images/tools/html-entity.svg"
+    },
+    {
+      "id": "jwt-generator",
+      "name": {
+        "zh": "JWT 生成器",
+        "en": "JWT Generator"
+      },
+      "description": {
+        "zh": "生成 JWT Token",
+        "en": "Generate JWT tokens"
+      },
+      "category": "generator",
+      "icon": "https://www.toolkitpub.com/images/tools/jwt-generator.svg"
+    },
+    {
+      "id": "crc-calculator",
+      "name": {
+        "zh": "CRC 计算器",
+        "en": "CRC Calculator"
+      },
+      "description": {
+        "zh": "计算 CRC 校验值",
+        "en": "Calculate CRC checksums"
+      },
+      "category": "crypto",
+      "icon": "https://www.toolkitpub.com/images/tools/crc-calculator.svg"
+    },
+    {
+      "id": "useragent-parser",
+      "name": {
+        "zh": "UserAgent 解析",
+        "en": "UserAgent Parser"
+      },
+      "description": {
+        "zh": "解析浏览器 UserAgent",
+        "en": "Parse browser UserAgent"
+      },
+      "category": "network",
+      "icon": "https://www.toolkitpub.com/images/tools/useragent-parser.svg"
+    },
+    {
+      "id": "json-minify",
+      "name": {
+        "zh": "JSON 压缩",
+        "en": "JSON Minify"
+      },
+      "description": {
+        "zh": "压缩 JSON 数据",
+        "en": "Minify JSON data"
+      },
+      "category": "json",
+      "icon": "https://www.toolkitpub.com/images/tools/json-minify.svg"
+    },
+    {
+      "id": "json-beautify",
+      "name": {
+        "zh": "JSON 美化",
+        "en": "JSON Beautify"
+      },
+      "description": {
+        "zh": "美化 JSON 格式",
+        "en": "Beautify JSON format"
+      },
+      "category": "json",
+      "icon": "https://www.toolkitpub.com/images/tools/json-beautify.svg"
+    }
+  ]
+}

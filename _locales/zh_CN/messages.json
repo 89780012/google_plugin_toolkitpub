@@ -1,0 +1,22 @@
+{
+  "ext_name": {
+    "message": "ToolkitPub 工具箱",
+    "description": "Extension name"
+  },
+  "ext_desc": {
+    "message": "快速访问 toolkitpub.com 工具",
+    "description": "Extension description"
+  },
+  "search_placeholder": {
+    "message": "搜索工具...",
+    "description": "Search placeholder"
+  },
+  "all_categories": {
+    "message": "全部",
+    "description": "All categories"
+  },
+  "no_results": {
+    "message": "未找到工具",
+    "description": "No results message"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ext_name": {
+    "message": "ToolkitPub Tools",
+    "description": "Extension name"
+  },
+  "ext_desc": {
+    "message": "Quick access to toolkitpub.com tools",
+    "description": "Extension description"
+  },
+  "search_placeholder": {
+    "message": "Search tools...",
+    "description": "Search placeholder"
+  },
+  "all_categories": {
+    "message": "All",
+    "description": "All categories"
+  },
+  "no_results": {
+    "message": "No tools found",
+    "description": "No results message"
+  }
+}

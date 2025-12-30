@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工具页面</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    .tool-page-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    .tool-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .tool-header .material-icons {
+      font-size: 48px;
+      color: #667eea;
+      margin-right: 20px;
+    }
+    .tool-header-info h1 {
+      margin: 0 0 8px 0;
+      font-size: 28px;
+      color: #333;
+    }
+    .tool-header-info p {
+      margin: 0;
+      color: #666;
+      font-size: 14px;
+    }
+    .tool-content {
+      margin-top: 20px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .back-btn:hover {
+      background: #5568d3;
+    }
+    .external-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+    .external-link:hover {
+      background: #218838;
+    }
+    .info-box {
+      background: #f8f9fa;
+      border-left: 4px solid #667eea;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    .info-box h3 {
+      margin: 0 0 10px 0;
+      color: #333;
+      font-size: 16px;
+    }
+    .info-box p {
+      margin: 0;
+      color: #666;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="tool-page-container">
+    <div class="tool-header">
+      <i class="material-icons" id="toolIcon">build</i>
+      <div class="tool-header-info">
+        <h1 id="toolName">工具名称</h1>
+        <p id="toolDescription">工具描述</p>
+      </div>
+    </div>
+
+    <div class="tool-content">
+      <div class="info-box">
+        <h3 id="infoTitle">关于此工具</h3>
+        <p id="infoText">此工具页面将在新窗口中打开，提供完整的工具功能。</p>
+      </div>
+
+      <a href="#" id="externalLink" class="external-link" target="_blank">
+        <span class="material-icons">open_in_new</span>
+        <span id="linkText">访问完整工具</span>
+      </a>
+
+      <div style="margin-top: 30px;">
+        <a href="popup.html" class="back-btn">
+          <span class="material-icons">arrow_back</span>
+          <span id="backText">返回工具列表</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 从 URL 参数获取工具信息
+    const urlParams = new URLSearchParams(window.location.search);
+    const toolId = urlParams.get('id');
+    const toolName = urlParams.get('name');
+    const toolDesc = urlParams.get('desc');
+    const toolUrl = urlParams.get('url');
+    const toolIcon = urlParams.get('icon');
+    const lang = urlParams.get('lang') || 'zh';
+
+    // 更新页面内容
+    if (toolName) {
+      document.getElementById('toolName').textContent = decodeURIComponent(toolName);
+      document.title = decodeURIComponent(toolName);
+    }
+    if (toolDesc) {
+      document.getElementById('toolDescription').textContent = decodeURIComponent(toolDesc);
+    }
+    if (toolIcon) {
+      document.getElementById('toolIcon').textContent = decodeURIComponent(toolIcon);
+    }
+    if (toolUrl) {
+      document.getElementById('externalLink').href = decodeURIComponent(toolUrl);
+    }
+
+    // 更新语言相关文本
+    if (lang === 'en') {
+      document.getElementById('infoTitle').textContent = 'About This Tool';
+      document.getElementById('infoText').textContent = 'This tool page will open in a new window with full functionality.';
+      document.getElementById('linkText').textContent = 'Visit Full Tool';
+      document.getElementById('backText').textContent = 'Back to Tools';
+    }
+  </script>
+</body>
+</html>
