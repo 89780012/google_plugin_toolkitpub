@@ -5,13 +5,19 @@
   "description": "__MSG_ext_desc__",
   "default_locale": "en",
   "icons": {
-    "16": "images/icon-A-16x16.svg",
-    "48": "images/icon-A-64x64.svg",
-    "128": "images/icon-A-128x128.svg"
+    "16": "images/icon-A-512x512.png",
+    "48": "images/icon-A-512x512.png",
+    "128": "images/icon-A-512x512.png"
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "__MSG_ext_name__"
+    "default_title": "__MSG_ext_name__",
+    "default_icon": {
+      "16": "images/icon-A-512x512.png",
+      "32": "images/icon-A-512x512.png",
+      "48": "images/icon-A-512x512.png",
+      "128": "images/icon-A-512x512.png"
+    }
   },
   "permissions": []
 }
